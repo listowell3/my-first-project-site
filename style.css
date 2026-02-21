@@ -1,14 +1,18 @@
 nav{
     background-color: antiquewhite;
-    gap:30px;
-    /* align-items: center; */
-    text-decoration: none;
     border-radius:10px;
     padding:20px;
     margin:20px;
     display: flex;
-    margin-right: 100px;
-    justify-content: end;
+    align-items: center;
+
+}
+
+
+.nav-links{
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
 }
 
 nav a.signup{
@@ -17,6 +21,33 @@ nav a.signup{
     gap: 10px;
     /* padding-left: 10px; */
     margin-right: 10px;
+}
+
+
+.logo img {
+  width: 60px;      /* adjust size */
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.header{
+  padding-top: 10px;
+  border: 30px;
+  padding-left: 30px;
+}
+
+.content{
+  padding-left: 30px;
+  border: 50px;
+  width: 400px;
+}
+
+.img img{
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  ;
 }
 
 
@@ -59,3 +90,19 @@ div.form-container{
 body{
     background-color: rgba(30,70,90);
 }
+
+
+/* .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.img img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+} */
