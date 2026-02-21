@@ -35,19 +35,22 @@ nav a.signup{
   padding-top: 10px;
   border: 30px;
   padding-left: 30px;
+  color: white;
 }
 
 .content{
   padding-left: 30px;
   border: 50px;
   width: 400px;
+  color: white;
+  justify-content: center;
 }
 
 .img img{
-  width: 400px;
-  height: auto;
-  border-radius: 20px;
-  ;
+  width: 200px;
+  height: 200px;
+  gap: 2px;
+  padding-left: 30px;
 }
 
 
@@ -89,6 +92,8 @@ div.form-container{
 
 body{
     background-color: rgba(30,70,90);
+    
+
 }
 
 
