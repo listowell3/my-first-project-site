@@ -1,113 +1,195 @@
-nav{
-    background-color: antiquewhite;
-    border-radius:10px;
-    padding:20px;
-    margin:20px;
-    display: flex;
-    align-items: center;
-
+/* ===== RESET & BASE ===== */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body{
+  background-color: rgb(30,70,90);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== NAVIGATION ===== */
+nav{
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img{
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+}
 
 .nav-links{
   margin-left: auto;
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
-nav a.signup{
-    background-color:antiquewhite;
-    color: lightblue;
-    gap: 10px;
-    /* padding-left: 10px; */
-    margin-right: 10px;
+.nav-links a{
+  text-decoration: none;
+  color: rgb(30,70,90);
+  font-weight: bold;
+}
+
+.nav-links a.signup{
+  color: lightblue;
+}
+
+/* ===== SHARED CONTAINERS ===== */
+.container,
+.contain,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6{
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.container img,
+.contain img,
+.container2 img,
+.container3 img,
+.container4 img,
+.container5 img,
+.container6 img{
+  width: 100%;
+  max-width: 22%;
+  margin: 20px auto;
+  /* padding: 0px; */
+  background-color: whitesmoke;
+  border-radius: 10px;
 }
 
 
-.logo img {
-  width: 60px;      /* adjust size */
+/* ===== HERO / BACKGROUND SECTIONS ===== */
+.container{
+  min-height: 300px;
+  background-image: url("image/bby_sleepingbaby.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.contain{
+  width: 100%;
+  height: 60vh;
+  padding: 0; /* ✅ remove space */
+  background-image: url("image/bby_product1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container6{
+  min-height: 300px;
+  background-image: url("image/bby_sleepingbaby.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== IMAGE GRIDS ===== */
+.container2,
+.container3,
+.container4,
+.container5{
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.container2 img,
+.container3 img,
+.container4 img,
+.container5 img{
+  width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover;
 }
 
+/* ===== CONTENT ===== */
+.content{
+  max-width: 1000px;
+  margin: 20px auto;
+  color: whitesmoke;
+  padding: 10px;
+}
 
 .header{
-  padding-top: 10px;
-  border: 30px;
-  padding-left: 30px;
-  color: white;
+  text-align: center;
+  color: black;
+  margin-bottom: 15px;
 }
 
-.content{
-  padding-left: 30px;
-  border: 50px;
-  width: 400px;
+/* ===== FORM ===== */
+.form-container{
+  background-color: blueviolet;
   color: white;
-  justify-content: center;
-}
-
-.img img{
-  width: 200px;
-  height: 200px;
-  gap: 2px;
-  padding-left: 30px;
-}
-
-
-div.form-container{
-    border: 200px;
-    background-color: blueviolet;
-    border-bottom-right-radius:auto;
-    color: white;
-    background-color: blueviolet;
-  color: white;
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   padding: 20px;
-
-  margin: 100px auto; /* 👈 centers the form */
+  margin: 60px auto;
   border-radius: 10px;
 }
 
-
-.submit-btn {
-  text-align: center;
-  margin-top: 20px;
-  /* width: auto; */
-  color: orange;
-  /* justify-content: center; */
+.form-container label{
+  display: block;
+  margin-top: 10px;
 }
 
+.form-container input,
+.form-container select{
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
 
+/* ===== BUTTON ===== */
+.submit-btn{
+  text-align: center;
+  margin-top: 20px;
+}
 
-.submit-btn button {
-  padding: 10px 25px;
-  background-color: white;
-  color: blueviolet;
+.submit-btn button{
+  padding: 10px 30px;
   background-color: orange;
+  color: blueviolet;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
 
+/* ===== MOBILE NAV ===== */
+@media (max-width: 768px){
 
-body{
-    background-color: rgba(30,70,90);
-    
+  nav{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links{
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    gap: 10px;
+  }
 
 }
-
-
-/* .img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-
-.img img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-} */
